@@ -1,0 +1,84 @@
+  <%- include('./base/header.ejs')%>    
+   <%- include('./base/nav.ejs')%> 
+   <div class="container">
+        <div class="alert text-center bg-primary my-3" style="color: white;">
+            <h4>Add Student</h4>
+        </div>
+    </div>
+     <div class="container">
+        <div class="row">
+        <div class="col"></div>
+        <div class="col">       
+           <form action="/add/student" method="post" enctype="multipart/form-data">
+
+             <div>
+                <label class="form-label">Roll no.</label>
+                <input type="text" class="form-control" name="rollNo" placeholder="Enter rollNo">
+              </div>  
+
+               <div>
+                <label class="form-label">Student Name</label>
+                <input type="text" class="form-control" name="studentName" placeholder="Enter Name">
+              </div> 
+               
+              <div>
+                <label class="form-label">Father Name</label>
+                <input type="text" class="form-control" name="fatherName" placeholder="Enter Father Name">
+              </div>  
+
+               <div>
+                <label class="form-label">Course</label>
+                <input type="text" class="form-control" name="course" placeholder="Enter Course">
+              </div>
+              
+                <!-- <div>
+                <label class="form-label">Branch</label>
+                <input type="text" class="form-control" name="branch">
+              </div> -->
+          
+             <br>
+               <select class="form-select" aria-label="Default select example" name="branch">
+                <option selected>Branch</option>
+                <option value="CSE">CSE</option>
+                <option value="Electrical">Electrical</option>
+                <option value="Mechanical">Mechanical</option>
+                <option value="Computer Application">Computer Application</option>
+              </select>
+             
+               <br>
+
+               <select class="form-select" aria-label="Default select example" name="yearOfAdmission">
+                <option selected>Year of Admission</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+              </select>
+
+              
+               <div>
+                <label class="form-label">Select Student Image</label>
+                <input type="file" class="form-control" name="studentImage">
+              </div>
+
+               <!-- <div>
+                <label class="form-label">Year  of Admission</label>
+                <input type="text" class="form-control" name="yearOfAdmission">
+              </div> -->
+              
+              <input type="submit" value="Add Student" class="btn btn-info w-100 my-3">
+  
+           </form> 
+        </div>
+        <div class="col"></div>
+
+
+        </div>
+
+    </div>
+    
+    <%- include('./base/footer.ejs')%>
