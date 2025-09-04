@@ -4,8 +4,9 @@ const Schema=mongoose.Schema;
 const studentSchema=new Schema({
 
     rollNo        :{ type:String, required:true},
-    studentName   :{ type:String},
+    studentName   :{ type:String},   
     fatherName    :{ type:String, required:true},
+    motherName    :{ type:String, required:true},
     course        :{type:String, required:true},
     branch        :{ type:String},
     yearOfAdmission:{ type:String},
